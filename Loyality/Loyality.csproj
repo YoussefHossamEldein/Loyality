@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Loyality.Application\Loyality.Application.csproj" />
+    <ProjectReference Include="..\Loyality.Infrastructure\Loyality.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

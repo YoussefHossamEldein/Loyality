@@ -1,3 +1,5 @@
+using Loyality.Infrastructure.DependencyInjection;
+
 namespace Loyality
 {
     public class Program
@@ -9,6 +11,7 @@ namespace Loyality
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddInfrastructureServices(builder.Configuration);
 
             var app = builder.Build();
 

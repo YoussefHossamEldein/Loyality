@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Loyality.Application\Loyality.Application.csproj" />
+    <ProjectReference Include="..\Loyality.Domain\Loyality.Domain.csproj" />
   </ItemGroup>
 
 </Project>
