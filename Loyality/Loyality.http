@@ -1,0 +1,6 @@
+@Loyality_HostAddress = http://localhost:5213
+
+GET {{Loyality_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Loyality.Application/Loyality.Application.csproj" />
+  <Project Path="Loyality.Domain/Loyality.Domain.csproj" />
+  <Project Path="Loyality.Infrastructure/Loyality.Infrastructure.csproj" />
+  <Project Path="Loyality/Loyality.csproj" />
+</Solution>
