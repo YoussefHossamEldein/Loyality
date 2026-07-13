@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Loyality.Domain.Entities
 {
-    public abstract class BaseEntity
+    public class Tenant : AuditableEntity
     {
-        public Guid Id { get; set; } = Guid.NewGuid();    
+        public string Code { get; set; }
+        public string Name { get; set; }
     }
 }

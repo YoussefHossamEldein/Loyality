@@ -24,7 +24,7 @@ namespace Loyality.Infrastructure.Repositories
             return await query.ToListAsync(ct);
         }
 
-        public async Task<TEntity?> GetByIdAsync(int id, CancellationToken ct = default) => await _dbContext.Set<TEntity>().FindAsync(id, ct);
+        public async Task<TEntity?> GetByIdAsync(Guid id, CancellationToken ct = default) => await _dbContext.Set<TEntity>().FindAsync(id, ct);
         public async Task<bool> AnyAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken ct = default)
         {
             return await _dbContext.Set<TEntity>().AsNoTracking().AnyAsync(predicate, ct);

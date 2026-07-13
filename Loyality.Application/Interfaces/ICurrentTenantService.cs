@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Loyality.Domain.Entities
+namespace Loyality.Application.Interfaces
 {
-    public abstract class BaseEntity
+    public interface ICurrentTenantService
     {
-        public Guid Id { get; set; } = Guid.NewGuid();    
+        Guid TenantId { get; set; }
     }
+    
 }

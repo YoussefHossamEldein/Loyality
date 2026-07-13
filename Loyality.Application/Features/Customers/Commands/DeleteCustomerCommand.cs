@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Loyality.Domain.Entities
+namespace Loyality.Application.Features.Customers.Commands
 {
-    public abstract class BaseEntity
+    internal class DeleteCustomerCommand
     {
-        public Guid Id { get; set; } = Guid.NewGuid();    
     }
 }

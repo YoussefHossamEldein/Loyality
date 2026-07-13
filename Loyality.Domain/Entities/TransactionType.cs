@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Loyality.Domain.Entities
 {
-    public abstract class BaseEntity
+    public enum TransactionType
     {
-        public Guid Id { get; set; } = Guid.NewGuid();    
+        Earn=1,
+        Redeem,
+        Adjustment,
+        Reversal,
+        Expiry
     }
 }

@@ -13,7 +13,12 @@ namespace Loyality.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<CustomerTierHistory> builder)
         {
+
             builder.Property(x => x.CreatedAt).HasDefaultValueSql("GETDATE()");
+            builder.Property(x => x.EntryReason).HasConversion<string>().HasMaxLength(30);
+            builder.Property(x => x.ExitReason).HasConversion<string>().HasMaxLength(30);
+            builder.HasIndex(x => new { x.CustomerId, x.EndDate });
+            builder.HasOne(x => x.Tier).WithMany(t => t.History).HasForeignKey(x => x.TierId).OnDelete(deleteBehavior:DeleteBehavior.Restrict);
         }
     }
 }

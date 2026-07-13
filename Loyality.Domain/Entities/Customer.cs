@@ -35,29 +35,19 @@ namespace Loyality.Domain.Entities
 
 
         // Tier
-        public Guid CurrentTierId { get; set; }
+        #region Relationships
         public Tier CurrentTier { get; set; } = null!;
+        public Guid CurrentTierId { get; set; }
         public ICollection<CustomerTierHistory> TierHistory { get; set; } = new List<CustomerTierHistory>();
-
         // Owned 1:1 aggregates
 
 
         public CustomerAddress? Address { get; set; }
 
-    }
-    [Owned]
-    public class CustomerAddress
-    {
-        public Guid TenantId { get; set; }
-        public Guid CustomerId { get; set; }
 
-        public string? Country { get; set; }
-        public string? City { get; set; }
-        public string? Region { get; set; }
-        public string? District { get; set; }
-        public string? Address { get; set; }
-        public string? PostalCode { get; set; }
-
-        public Customer Customer { get; set; } = null!;
+        public int CurrentScore { get; set; }
+        public ICollection<CustomerTransaction> Transactions { get; set; }
+        #endregion
     }
+    
 }

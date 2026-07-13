@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <Folder Include="DTOs\Tiers\" />
-    <Folder Include="Features\Customers\Commands\" />
-    <Folder Include="Features\Customers\Handlers\" />
-    <Folder Include="Features\Customers\Queries\" />
     <Folder Include="Features\Tiers\Commands\" />
     <Folder Include="Features\Tiers\Handlers\" />
     <Folder Include="Features\Tiers\Queries\" />
