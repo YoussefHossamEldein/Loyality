@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Loyality.Infrastructure.Services
 {
-    internal class StaticCurrentTenantService : ICurrentTenantService
+    public class StaticCurrentTenantService : ICurrentTenantService
     {
         public Guid TenantId => SeedTenant.TestTenantId;
 

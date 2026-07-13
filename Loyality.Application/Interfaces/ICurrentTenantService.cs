@@ -8,7 +8,7 @@ namespace Loyality.Application.Interfaces
 {
     public interface ICurrentTenantService
     {
-        Guid TenantId { get; set; }
+       public Guid TenantId { get; }
     }
     
 }

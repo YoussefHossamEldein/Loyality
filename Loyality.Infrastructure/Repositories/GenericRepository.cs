@@ -36,15 +36,15 @@ namespace Loyality.Infrastructure.Repositories
         }
 
 
-        public async void Add(TEntity entity)
+        public  void Add(TEntity entity)
         {
-            await _dbContext.Set<TEntity>().AddAsync(entity);
+             _dbContext.Set<TEntity>().AddAsync(entity);
             
           
         }
 
 
-        public async void Delete(TEntity entity)
+        public  void Delete(TEntity entity)
         {
            
            
