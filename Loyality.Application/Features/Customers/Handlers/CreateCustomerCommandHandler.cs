@@ -37,6 +37,7 @@ namespace Loyality.Application.Features.Customers.Handlers
                 FirstName = request.Dto.FirstName,
                 LastName = request.Dto.LastName,
                 Email = request.Dto.Email,
+                LoyaltyMemberId = $"LM{DateTime.Now:yyyyMMdd}{Random.Shared.Next(1000, 9999)}",
                 DateOfBirth = DateOnly.FromDateTime(request.Dto.DateOfBirth),
                 Gender = request.Dto.Gender,
                 PhoneNumber = request.Dto.PhoneNumber,

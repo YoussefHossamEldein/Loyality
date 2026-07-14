@@ -18,7 +18,15 @@ namespace Loyality
                 cfg.RegisterServicesFromAssembly(
                     Assembly.Load("Loyality.Application"));
             });
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200") // Angular URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
 
             var app = builder.Build();
 

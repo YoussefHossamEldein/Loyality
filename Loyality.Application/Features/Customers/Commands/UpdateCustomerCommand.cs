@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Loyality.Application.Features.Customers.Commands
 {
-    internal class UpdateCustomerCommand
+    public class UpdateCustomerCommand
     {
     }
 }

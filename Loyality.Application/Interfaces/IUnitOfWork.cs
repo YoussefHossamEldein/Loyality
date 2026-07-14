@@ -11,6 +11,7 @@ namespace Loyality.Application.Interfaces
     {
         IGenericRepository<TEntity> GetRepository<TEntity>() where TEntity : AuditableEntity ,new();
         Task<int> SaveChangesAsync(CancellationToken ct = default);
+        public ICustomerRepository CustomerRepository { get;  }
 
     }
 }

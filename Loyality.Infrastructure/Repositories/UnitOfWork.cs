@@ -13,9 +13,13 @@ namespace Loyality.Infrastructure.Repositories
     {
         private readonly LoyalityDbContext _dbContext;
         private readonly Dictionary<string, object> _repositories = [];
-        public UnitOfWork(LoyalityDbContext dbContext)
+
+        public ICustomerRepository CustomerRepository { get; }
+
+        public UnitOfWork(LoyalityDbContext dbContext,ICustomerRepository customerRepository)
         {
             _dbContext = dbContext;
+            CustomerRepository = customerRepository;
         }
       
 
